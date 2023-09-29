@@ -14,7 +14,7 @@ enum Dir
 
 void setup()
 {
-  /*Set same frequency for RightPwm (Pin 3) and LeftPwm (pin 5) to get same performance in both motors*/
+  /*Set same frequency for LeftPwm (Pin 3) and RightPwm (pin 5) to get same performance in both motors*/
   TCCR0B = TCCR0B & B11111000 | B00000011; // for PWM frequency of 976.56 Hz to LeftPwm pin (The DEFAULT)
   TCCR2B = TCCR2B & B11111000 | B00000011; // for PWM frequency of 980.39 Hz to RightPwm pin
   pinMode(MotRP, OUTPUT);
